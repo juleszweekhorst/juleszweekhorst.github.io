@@ -1,0 +1,75 @@
+@import '../styles/theme-variables.scss';
+
+.App {
+    @include themify($themes) {
+      background-color: themed('mainBackground') !important;
+      color: themed('textMain') !important;
+    }
+  min-height: 100vh !important;
+}
+
+.icons {
+    @include themify($themes) {
+      fill: themed('iconFill');
+    }
+}
+
+.icons:focus, .icons:hover {
+  @include themify($themes) {
+      fill: themed('linkHover') !important;
+    }
+}
+
+.logos {
+    @include themify($themes) {
+      fill: themed('logoFill');
+    }
+}
+
+.nb {
+  @include themify($themes) {
+    background-color: themed('navBarFill');
+  }
+}
+
+.dp-01 {
+    @include themify($themes) {
+        background-color: themed('dp-01');
+      }
+}
+
+.dd-menu {
+  @include themify($themes) {
+      background-color: themed('mainBackground');
+    }
+}
+
+.b-l {
+    @include themify($themes) {
+        border-color: themed('borderLight') !important;
+      }
+}
+
+.main-text {
+    @include themify($themes) {
+        color: themed('textMain') !important;
+      }
+}
+
+a {
+    @include themify($themes) {
+        color: themed('textMain');
+      }
+}
+
+a:focus, a:hover {
+    @include themify($themes) {
+        color: themed('linkHover') !important;
+      }
+}
+
+.head-text {
+    @include themify($themes) {
+        color: themed('headText') !important;
+      }
+}

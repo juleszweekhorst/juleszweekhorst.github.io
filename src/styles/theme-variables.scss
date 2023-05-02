@@ -1,0 +1,45 @@
+// theme-variables.scss
+$themes: (
+    light: (
+        mainBackground: #ffffff,
+        textMain: #000,
+        linkHover: #f8cc08,
+        iconFill:#000,
+        headText:#ffffff,
+        dp-01: white,
+        borderLight: #0000001A,
+        navBarFill: white,
+      ),  
+      dark: (
+        mainBackground:#121212,
+        textMain: #eff2f7,
+        linkHover: #f8cc08,
+        iconFill:#eff2f7,
+        headText:#ffffff,
+        dp-01: #ffffff0D,
+        borderLight: #ffffff1A,
+        navBarFill: #1e1e1e
+      ),
+    );
+
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+            $value: map-get(map-get($themes, $theme), '#{$key}');
+            $theme-map: map-merge(
+            $theme-map,
+                (
+                $key: $value,
+                )
+            ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+        }
+    }@function themed($key) {
+    @return map-get($theme-map, $key);
+    }
+    

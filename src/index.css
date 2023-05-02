@@ -1,0 +1,87 @@
+:root {
+    --home-color: #4276d1;
+    --economy-color: #006cde;
+    --sports-color: #e00613 ;
+}
+
+html,body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: #232a31 !important;
+}
+
+#togglenone::after {
+    display: none !important;
+  }
+
+
+.link-y:focus, .link-y:hover {
+    color: #404040 !important;
+}
+
+.liveblinker {
+    -webkit-animation: 1s blink ease infinite;
+    -moz-animation: 1s blink ease infinite;
+    -ms-animation: 1s blink ease infinite;
+    -o-animation: 1s blink ease infinite;
+    animation: 2s blink ease infinite;
+}
+@keyframes blink {
+    from, to {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+@-moz-keyframes blink {
+    from, to {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes blink {
+    from, to {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@-ms-keyframes blink {
+    from, to {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    from, to {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.nav-link {
+    color: #404040 !important;
+}
+
+.dark_0 {
+    color: #151515 !important;
+}
+
+.dark_1 {
+    color: #232a31 !important;
+}
+
+.dark_2 {
+    color: #707070 !important;
+}
+
+.white-content {
+    background: #e4e4e4;
+  }
