@@ -32,6 +32,9 @@
       .gradient {
         background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
       }
+      .gradientbg2 {
+        background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 300%);
+      }
 
       button,
       .gradient2 {
@@ -73,21 +76,30 @@
 
   <body class="gradient leading-relaxed tracking-wide flex flex-col">
     <!--Nav-->
-    <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
+    <nav id="header" class="gradientbg2 tracking-wide w-full z-50 top-0 text-white py-1 lg:py-6 fixed ">
       <div
         class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6"
       >
         <div class="pl-4 flex items-center">
           <a
             class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="#"
+            href="#home"
           >
-            <svg
+            <!-- <svg
               class="h-6 w-6 inline-block fill-current text-yellow-700"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
-            >
               <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+            > -->
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="16"
+            height="16" 
+            fill="currentColor" 
+            class="bi bi-gear h-8 w-8 inline-block fill-current text-yellow-700" 
+            viewBox="0 0 16 16"> 
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/> <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/> </svg>
+              
             </svg>
             AI Prototyping
           </a>
@@ -117,7 +129,7 @@
             <li class="mr-3">
               <a
                 class="inline-block py-2 px-4 text-black font-bold no-underline"
-                href="#"
+                href="#about"
                 >Hoe het werkt</a
               >
             </li>
@@ -137,46 +149,50 @@
             </li>
           </ul>
           <button
-            id="navAction"
+            href="#contact"
             class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
           >
+          <a
+          href="#contact">
             Contact
+            </a>
           </button>
         </div>
       </div>
     </nav>
+    
+    <section id="home">
+      <div  class="container mx-auto h-screen mt-48">
+        <div class="text-center px-3 lg:px-0">
+          <h1
+            class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight"
+          >
+            Vereenvoudig de menaier om custom onderdelen verkopen
+          </h1>
+          <p
+            class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8"
+          >
+            Automatiseer de verkoop en inkoop
+          </p>
+          <a href="#contact">
+          <button
+            href="#contact"
+            class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+          >
+            contact
+          </button>
+        </a>
+          
+            
+        </div>
 
-    <div class="container mx-auto h-screen">
-      <div class="text-center px-3 lg:px-0">
-        <h1
-          class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight"
-        >
-          Main Hero Message to sell yourself!
-        </h1>
-        <p
-          class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8"
-        >
-          Sub-hero message, not too long and not too short. Make it just right!
-        </p>
-
-        <button
-          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
-        >
-          Sign Up
-        </button>
-        <a
-          href="#"
-          class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8"
-          >View Additional Action</a
-        >
+        <div class="flex items-center w-full mx-auto content-end">
+          <div
+            class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
+          > asdfasdfasdfdf</div>
+        </div>
       </div>
-
-      <div class="flex items-center w-full mx-auto content-end">
-        <div
-          class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
-        ></div>
-      </div>
-    </div>
+    </section>
 
     <section class="bg-white border-b py-12 ">
       <div
@@ -945,7 +961,7 @@
       </div>
     </section>
 
-    <section class="gradient w-full mx-auto text-center pt-6 pb-12">
+    <section id="contact" class="gradient w-full mx-auto text-center pt-6 pb-12">
       <h2
         class="w-full my-2 text-5xl font-black leading-tight text-center text-white"
       >
