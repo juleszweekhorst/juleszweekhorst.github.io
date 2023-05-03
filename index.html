@@ -8,6 +8,18 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
 
     <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
@@ -35,6 +47,9 @@
       .gradientbg2 {
         background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 300%);
       }
+      img {
+  border-radius: 50%;
+}
 
       button,
       .gradient2 {
@@ -71,6 +86,21 @@
       }
 
       /* Custom code for the demo */
+      body {
+    font-family: 'Ubuntu';font-size: 22px;
+}
+#contact_info,
+        #contact_us {
+            height: 350px;
+            width: 350px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            #contact_info {
+                display: none;
+            }
+        }
+</style>
     </style>
   </head>
 
@@ -91,7 +121,7 @@
               viewBox="0 0 20 20"
               <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
             > -->
-            <svg 
+            <!-- <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="16"
             height="16" 
@@ -100,8 +130,9 @@
             viewBox="0 0 16 16"> 
             <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/> <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/> </svg>
               
-            </svg>
-            Geometriq
+            </svg> -->
+            <img src="static/images/geometriq_logo.png" alt="logo" width="80" height="80" border-radius: 50%;> 
+            <!-- GeometriQ -->
           </a>
         </div>
 
@@ -160,9 +191,12 @@
         </div>
       </div>
     </nav>
+     <!-- end navbar -->
+
+     <!-- home section -->
     
     <section id="home">
-      <div  class="container mx-auto h-screen mt-48">
+      <div  class="container mx-auto h-screen mt-80">
         <div class="text-center px-3 lg:px-0">
           <h1
             class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight"
@@ -174,6 +208,7 @@
           >
           Transformeer uw productiefaciliteit met behulp van AI, en verbeter uw concurrentiepositie
           </p>
+          
           <a href="#contact">
           <button
             href="#contact"
@@ -195,82 +230,16 @@
         </div>  -->
       </div>
     </section>
+    <!-- end home -->
 
-    <section class="bg-white border-b py-12 ">
-      <div
-        class="container mx-auto flex flex-wrap items-center justify-between pb-12"
-      >
-        <h2
-          class="w-full my-2 text-xl font-black leading-tight text-center text-gray-800 lg:mt-8"
-        >
-          Our Customers / Featured in
-        </h2>
-        <div class="w-full mb-4">
-          <div
-            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-          ></div>
-        </div>
-
-        <div
-          class="flex flex-1 flex-wrap max-w-4xl mx-auto items-center justify-between text-xl text-gray-500 font-bold opacity-75"
-        >
-          <span class="w-1/2 p-4 md:w-auto flex items-center"
-            ><svg
-              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M7 0H6L0 3v6l4-1v12h12V8l4 1V3l-6-3h-1a3 3 0 0 1-6 0z"
-              /></svg>
-            >TeeShirtz</span
-          >
-
-          <span class="w-1/2 p-4 md:w-auto flex items-center"
-            ><svg
-              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.75 8l-3.74-3.75a3.99 3.99 0 0 1 6.82-3.08A4 4 0 0 1 15.75 8zM1.85 15.3l9.2-9.19 2.83 2.83-9.2 9.2-2.82-2.84zm-1.4 2.83l2.11-2.12 1.42 1.42-2.12 2.12-1.42-1.42zM10 15l2-2v7h-2v-5z"
-              /></svg>
-            >Mic.Check</span
-          >
-
-          <span class="w-1/2 p-4 md:w-auto flex items-center"
-            ><svg
-              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M10 12a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4 2.75V20l-4-4-4 4v-8.25a6.97 6.97 0 0 0 8 0z"
-              /></svg>
-            >BadgeLife.io</span
-          >
-
-          <span class="w-1/2 p-4 md:w-auto flex items-center"
-            ><svg
-              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.3 14.89l2.77 2.77a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0l-2.59-2.58A5.99 5.99 0 0 1 11 18V9.04a1 1 0 0 0-2 0V18a5.98 5.98 0 0 1-3.07-1.51l-2.59 2.58a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41l2.77-2.77A5.95 5.95 0 0 1 4.07 13H1a1 1 0 1 1 0-2h3V8.41L.93 5.34a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l2.1 2.1h11.12l2.1-2.1a1 1 0 0 1 1.41 0 1 1 0 0 1 0 1.41L16 8.41V11h3a1 1 0 1 1 0 2h-3.07c-.1.67-.32 1.31-.63 1.89zM15 5H5a5 5 0 1 1 10 0z"
-              /></svg>
-            >Bugz 4 Life</span
-          >
-        </div>
-      </div>
-    </section>
+   <!-- advantages -->
 
     <section class="bg-gray-100 border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Title
+          Voordelen van geometriq
         </h2>
         <div class="w-full mb-4">
           <div
@@ -745,12 +714,15 @@
       </div>
     </section>
 
+    <!-- end Voordelen -->
+
+    <!-- How it works -->
     <section class="bg-white border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Title
+          Hoe werkt het?
         </h2>
         <div class="w-full mb-4">
           <div
@@ -764,10 +736,10 @@
           >
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-                GETTING STARTED
+                1.
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
+                Upload je CAD bestanden.
               </div>
               <p class="text-gray-600 text-base px-6 mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -794,10 +766,10 @@
           >
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-                GETTING STARTED
+                2.
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
+                Selecteer het productie process
               </div>
               <p class="text-gray-600 text-base px-6 mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -824,10 +796,10 @@
           >
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-                GETTING STARTED
+                3.
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
+                Bestel je onderdelen
               </div>
               <p class=" text-gray-600 text-base px-6 mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -849,141 +821,117 @@
         </div>
       </div>
     </section>
+<!-- end how it works -->
 
-    <section class="bg-gray-100 py-8">
-      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h2
-          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
-        >
-          Pricing
-        </h2>
-        <div class="w-full mb-4">
-          <div
-            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-          ></div>
-        </div>
 
-        <div
-          class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"
-        >
-          <div
-            class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
-          >
-            <div
-              class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
-            >
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Free
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div
-              class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-            >
-              <div
-                class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
-              >
-                £0 <span class="text-base">for one user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10"
-          >
-            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
-              <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
-              <ul class="w-full text-center text-base font-bold">
-                <li class="py-4">Thing</li>
-                <li class="py-4">Thing</li>
-                <li class="py-4">Thing</li>
-                <li class="py-4">Thing</li>
-              </ul>
-            </div>
-            <div
-              class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6"
-            >
-              <div class="w-full pt-6 text-4xl font-bold text-center">
-                £x.99 <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
-          >
-            <div
-              class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
-            >
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Pro
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div
-              class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-            >
-              <div
-                class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
-              >
-                £x.99 <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+   
     <section id="contact" class="gradient w-full mx-auto text-center pt-6 pb-12">
       <h2
         class="w-full my-2 text-5xl font-black leading-tight text-center text-white"
       >
-        Call to Action
+        Kom nu op de wachtlijst!
       </h2>
-      <div class="w-full mb-4">
-        <div
-          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
-        ></div>
-      </div>
+      <div class="h-screen w-full grid place-items-center bg-slate-100">
+        <div class="bg-white rounded-md shadow-md flex flex-row">
+            <!-- contact information form -->
+            <!-- <div class="bg-blue-800 p-8 md:hover:scale-y-110 rounded-md transition md:block" id="contact_info">
+                <div class="flex justify-between">
+                    
+                    <h2 class="text-white text-xs flex flex-row md:hidden block cursor-pointer" id="swtich_to_contact_us">Contact <svg
+                            xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg></h2>
+                </div>
+                <div class="mt-6 flex flex-row">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-slate-200 text-xs">Name :</h2>
+                        <p class="text-white text-xs">David Warner</p>
+                    </div>
+                </div>
 
-      <h3 class="my-4 text-3xl font-extrabold">
-        Main Hero Message to sell yourself!
-      </h3>
+                <div class="mt-4 flex flex-row">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-slate-200 text-xs">Email :</h2>
+                        <p class="text-white text-xs">davidwarner323@xyz.com</p>
+                    </div>
+                </div>
 
-      <button
-        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
-      >
-        Action!
-      </button>
+                <div class="mt-4 flex flex-row">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-slate-200 text-xs">Phone :</h2>
+                        <p class="text-white text-xs">123-456-789-01</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex flex-row">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-slate-200 text-xs">Address :</h2>
+                        <p class="text-white text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+                            dolores.</p>
+                    </div>
+                </div>
+
+            </div> -->
+
+
+            <!-- get in touch form -->
+            <div class="px-6 py-8" id="contact_us">
+                <div class="flex justify-between text-center">
+                    <h2 class="text-gray-800 text-xl text-center">Contact formulier</h2>
+                    <h2 class="text-red-800 text-xs flex flex-row md:hidden block cursor-pointer" id="swtich_to_contact_info">Contact Info <svg
+                            xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg></h2>
+                </div>
+                <input type="text" placeholder="Naam"
+                    class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"><br>
+                <input type="text" placeholder="Email"
+                    class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"><br>
+                <input type="text" placeholder="Onderwerp"
+                    class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"><br>
+                <textarea placeholder="Bericht"
+                    class="w-full text-xs px-3 py-2 h-20 my-2 outline-none rounded-md border focus:shadow-sm resize-none"></textarea><br>
+                <input type="submit" value="Verzenden"
+                    class="gradient2 px-4 py-2 rounded-md text-gray-800 text-xs cursor-pointer hover:shadow-md">
+            </div>
+
+        </div>
+    </div>
     </section>
 
     <!--Footer-->
@@ -1145,6 +1093,209 @@
         }
         return false;
       }
-    </script>
+      
+        
+    let contact_info = document.querySelector('#contact_info');
+    let contact_us = document.querySelector('#contact_us');
+    let swtich_to_contact_us = document.querySelector('#swtich_to_contact_us');
+    let swtich_to_contact_info = document.querySelector('#swtich_to_contact_info');
+
+    swtich_to_contact_us.addEventListener("click",()=>{
+        contact_info.style.display = 'none';
+        contact_us.style.display = 'block';
+    });
+    
+    swtich_to_contact_info.addEventListener("click",()=>{
+        contact_info.style.display = 'block';
+        contact_us.style.display = 'none';
+    });
+
+</script>
+
   </body>
 </html>
+
+ <!-- <section class="bg-gray-100 py-8">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2
+          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
+        >
+          Pricing
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"
+        >
+          <div
+            class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
+          >
+            <div
+              class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Free
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+              </ul>
+            </div>
+            <div
+              class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
+            >
+              <div
+                class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
+              >
+                £0 <span class="text-base">for one user</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10"
+          >
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+              <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
+              <ul class="w-full text-center text-base font-bold">
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+              </ul>
+            </div>
+            <div
+              class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6"
+            >
+              <div class="w-full pt-6 text-4xl font-bold text-center">
+                £x.99 <span class="text-base">/ per user</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
+          >
+            <div
+              class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Pro
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+              </ul>
+            </div>
+            <div
+              class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
+            >
+              <div
+                class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
+              >
+                £x.99 <span class="text-base">/ per user</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+
+
+<!-- <section class="bg-white border-b py-12 ">
+  <div
+    class="container mx-auto flex flex-wrap items-center justify-between pb-12"
+  >
+    <h2
+      class="w-full my-2 text-xl font-black leading-tight text-center text-gray-800 lg:mt-8"
+    >
+      Our Customers / Featured in
+    </h2>
+    <div class="w-full mb-4">
+      <div
+        class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+      ></div>
+    </div>
+
+    <div
+      class="flex flex-1 flex-wrap max-w-4xl mx-auto items-center justify-between text-xl text-gray-500 font-bold opacity-75"
+    >
+      <span class="w-1/2 p-4 md:w-auto flex items-center"
+        ><svg
+          class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M7 0H6L0 3v6l4-1v12h12V8l4 1V3l-6-3h-1a3 3 0 0 1-6 0z"
+          /></svg>
+        >TeeShirtz</span
+      >
+
+      <span class="w-1/2 p-4 md:w-auto flex items-center"
+        ><svg
+          class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M15.75 8l-3.74-3.75a3.99 3.99 0 0 1 6.82-3.08A4 4 0 0 1 15.75 8zM1.85 15.3l9.2-9.19 2.83 2.83-9.2 9.2-2.82-2.84zm-1.4 2.83l2.11-2.12 1.42 1.42-2.12 2.12-1.42-1.42zM10 15l2-2v7h-2v-5z"
+          /></svg>
+        >Mic.Check</span
+      >
+
+      <span class="w-1/2 p-4 md:w-auto flex items-center"
+        ><svg
+          class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M10 12a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4 2.75V20l-4-4-4 4v-8.25a6.97 6.97 0 0 0 8 0z"
+          /></svg>
+        >BadgeLife.io</span
+      >
+
+      <span class="w-1/2 p-4 md:w-auto flex items-center"
+        ><svg
+          class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M15.3 14.89l2.77 2.77a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0l-2.59-2.58A5.99 5.99 0 0 1 11 18V9.04a1 1 0 0 0-2 0V18a5.98 5.98 0 0 1-3.07-1.51l-2.59 2.58a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41l2.77-2.77A5.95 5.95 0 0 1 4.07 13H1a1 1 0 1 1 0-2h3V8.41L.93 5.34a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l2.1 2.1h11.12l2.1-2.1a1 1 0 0 1 1.41 0 1 1 0 0 1 0 1.41L16 8.41V11h3a1 1 0 1 1 0 2h-3.07c-.1.67-.32 1.31-.63 1.89zM15 5H5a5 5 0 1 1 10 0z"
+          /></svg>
+        >Bugz 4 Life</span
+      >
+    </div>
+  </div>
+</section> -->
