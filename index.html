@@ -832,13 +832,12 @@
         Kom nu op de wachtlijst!
       </h2>
       <div class="h-screen w-full grid place-items-center bg-slate-100">
-        <form action="https://formsubmit.co/juleszweekhorst@gmail.com" method="POST">
-          <input type="text" name="name"  placeholder="Naam" required>
+       
+          <!-- <input type="text" name="name"  placeholder="Naam" required>
           <input type="email" name="email" placeholder="Email" required>
-          <input type="hidden" name="_subject" value="New subscriber">
-          <input type="hidden" name="_next" value="https://geometriq.nl/thanks.html">
-          <button type="submit">Send</button>
-     </form> 
+           -->
+          
+      
         <!-- <div class="bg-white rounded-md shadow-md flex flex-row">
 
             <!-- get in touch form -->
@@ -853,16 +852,21 @@
                                 clip-rule="evenodd" />
                         </svg></h2>
                 </div>
-                <input type="text" placeholder="Naam"
+                <form action="https://formsubmit.co/juleszweekhorst@gmail.com" method="POST">
+                <input type="text" placeholder="Naam" required
                     class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"><br>
-                <input type="text" placeholder="Email"
+                <input type="text" placeholder="Email" required
                     class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"><br>
-                <input type="text" placeholder="Onderwerp"
+                <input type="text" placeholder="Onderwerp" required
                     class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"><br>
-                <textarea placeholder="Bericht"
+                <textarea placeholder="Bericht" required
                     class="w-full text-xs px-3 py-2 h-20 my-2 outline-none rounded-md border focus:shadow-sm resize-none"></textarea><br>
+                <input type="hidden" name="_subject" value="New subscriber">
+                <input type="hidden" name="_next" value="https://geometriq.nl/thanks.html">
+                
                 <input type="submit" value="Verzenden"
                     class="gradient2 px-4 py-2 rounded-md text-gray-800 text-xs cursor-pointer hover:shadow-md">
+                  </form>
             </div>
 
         </div> -->
