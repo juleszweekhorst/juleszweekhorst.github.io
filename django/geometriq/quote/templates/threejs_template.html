@@ -1,0 +1,119 @@
+{% extends 'main2.html' %} {% load static %} {% load crispy_forms_tags %}
+{% load tailwind_filters %}
+
+
+{%block content%}
+
+<body class="text-blueGray-700 antialiased">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div id="canvas-container"></div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    charset="utf-8"
+  ></script>
+  {% comment %} <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> {% endcomment %}
+  {% comment %} <script src="https://unpkg.com/three@0.138.0/build/three.module.js"></script> {% endcomment %}
+  {% comment %} <script src="{% static 'three\node_modules\three\examples\js\loaders\GLTFLoader.js' %}"></script> {% endcomment %}
+
+  
+
+  
+  <script type="module" src="{% static 'js/main.js' %}" ></script>
+{% comment %}   
+
+  <script type="module">
+    import * as THREE from 'three';
+    
+    // Create a Three.js scene
+    const scene = new THREE.Scene();
+  
+    const grid = new THREE.GridHelper(30, 30);
+    scene.add(grid);
+    // Create a new box geometry
+    const bgGeometry = new THREE.BoxGeometry(20000, 20000, 20000);
+  
+    // Create a new white material for the box
+    const bgMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+  
+    // Create a new mesh using the geometry and material
+    const bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
+  
+    // Set the position of the box so that it's behind the camera
+    bgMesh.position.set(0, 0, -10000);
+  
+    // Add the box to the scene
+    scene.add(bgMesh);
+  
+    // Create a camera and position it
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+  
+    // Create a cube and add it to the scene
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+  
+    // Get the canvas element and use it as the renderer's output
+    const canvas = document.getElementById('my-canvas');
+    const renderer = new THREE.WebGLRenderer({ canvas });
+  
+    // Set the renderer's size
+    renderer.setSize(window.innerWidth/3, window.innerHeight*4/11);
+  
+    // Render the scene
+    function animate() {
+      requestAnimationFrame(animate);
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+
+  <script>
+    import * as THREE from 'three';
+
+    var loader = new THREE.GLTFLoader();
+    // Define the container and scene
+    var container = document.getElementById('model-container');
+    var scene = new THREE.Scene();
+  
+    // Create the WebGL renderer
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    container.appendChild(renderer.domElement);
+  
+    // Create the camera
+    var camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+    camera.position.z = 5;
+  
+    // Create the GLTFLoader instance
+    var loader = new THREE.GLTFLoader();
+  
+    // Load the model
+    loader.load('{% static "models/your_model.gltf" %}', function(gltf) {
+      scene.add(gltf.scene);
+    }, undefined, function(error) {
+      console.error(error);
+    });
+  
+    // Render the scene
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script> {% endcomment %}
+  
+</body>
+
+
+
+{% endblock %}

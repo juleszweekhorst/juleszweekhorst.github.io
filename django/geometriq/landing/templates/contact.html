@@ -1,0 +1,44 @@
+{% extends 'main.html' %} {% load static %} {%block content%}
+
+</section>
+
+      
+<div class="h-screen w-full grid place-items-center bg-slate-100">
+      <!-- get in touch form -->
+      <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-white"
+>
+  Kom nu op de wachtlijst!
+</h2>
+
+      <div class="px-6 py-8" id="contact_us">
+        <!-- <h2 class="text-gray-800 text-xl text-center">Laat je contact gegevens achter en kom op de wachtlijst</h2> -->
+        
+          <div class="flex justify-between text-center">
+            
+              <!-- <h2 class="text-gray-800 text-xl text-center">Contact formulier</h2> -->
+              <h2 class="text-red-800 text-xs flex flex-row md:hidden block cursor-pointer" id="swtich_to_contact_info">Contact formulier <svg
+                      xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd" />
+                  </svg></h2>
+          </div>
+          <form action="https://formsubmit.co/juleszweekhorst@gmail.com" method="POST">
+            <input type="text" placeholder="Naam" required
+                class="w-full text-L px-3 h-12 my-2 outline-none rounded-md border focus:shadow-sm"><br>
+            <input type="email" placeholder="Email" required
+                class="w-full text-L px-3 h-12 my-2 outline-none rounded-md border focus:shadow-sm"><br>
+            
+            <input type="hidden" nam value="Verzenden"
+              class="gradient2 px-8 py-4 rounded-md text-gray-800 text-l  font-extrabold  cursor-pointer hover:shadow-md"> -->
+              <button type="submit" 
+              class="gradient2 px-8 py-4 rounded-md text-gray-800 text-l  font-extrabold  cursor-pointer hover:shadow-md"
+              >Verzenden</button>
+          </form>
+      </div>
+
+  </div> 
+
+</section>
+{%endblock%}
