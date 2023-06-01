@@ -2,10 +2,13 @@ from django import forms
 from django.forms import ModelForm, TextInput
 from .models import *
 
-class ThreeDModelForm(forms.ModelForm):
-    class Meta:
-        model = ThreeDModel
-        fields = ('model_file',)
+# class ThreeDModelForm(forms.ModelForm):
+#     class Meta:
+#         model = ThreeDModel
+#         fields =['model_file']
+#         # labels = {
+#         #     'model_file': ''
+#         # }
 
 class ThreeDModelSpecificationForm(forms.ModelForm):
     class Meta:

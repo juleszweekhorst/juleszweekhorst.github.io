@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     
     'tailwind',
     'landing',
+    
     'theme',
     'quote.apps.QuoteConfig',
 ]
@@ -133,8 +134,8 @@ STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/uploads')
-MEDIA_URL = 'uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/uploads/'
 
 
 # Default primary key field type

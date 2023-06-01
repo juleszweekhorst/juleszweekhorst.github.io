@@ -22,9 +22,11 @@
       <!-- 3d part-->
       <div class="px-4 md:px-10 mx-auto w-full -m-24">
         <div class="flex flex-wrap">
+
+          {% comment %} part viewer {% endcomment %}
           <div class="w-full xl:w-8/12 mb-12 xl:mb-10 px-4">
             <div
-              class="relative flex flex-col min-w-0  w-full mb-6 shadow-lg my-20 rounded bg-blueGray-700"
+              class="relative flex flex-col min-w-0  w-full mb-6 shadow-lg my-20 rounded bg-blueGray-700 "
             >
               <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
                 <div class="flex flex-wrap items-center">
@@ -32,24 +34,32 @@
                     <h6
                       class="uppercase text-blueGray-100 mb-1 text-xs font-semibold"
                     >
-                    Jouw onderdeel
+                    Jouw onderdeels
                     </h6>
                     <h2 class="text-white text-xl font-semibold">
                       
                     </h2>
                   </div>
+                  {% comment %} model="{% static {'models/COFFEEE.STL'} %}" {% endcomment %}
                 </div>
               </div>
               <div class="p-4 flex-auto">
                 <!-- Chart -->
-                <div class="relative rounded w-full sm:w-1/2 md:w-2/3 lg:w-3/4 xl:w-full">
-                  <div id="canvas-container" class=""></div>
-                  {% comment %} <canvas id="my-canvas"></canvas> {% endcomment %}
+                <div class="relative rounded w-full sm:w-1/2 md:w-2/3 lg:w-3/4 xl:w-full h-200 text-white">
+
+                  <div class="online_3d_viewer"
+                      model= "{{model.model_file.url}}"
+                        
+                        >
+                      </div>
                 </div>
               </div>
               
             </div>
           </div>
+
+          {% comment %} end fileviewer {% endcomment %}
+
           <div class="w-full xl:w-4/12 px-4">
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
@@ -58,7 +68,7 @@
                 <div class="flex flex-wrap items-center">
                   <div class="relative w-full max-w-full flex-grow flex-1">
                     <h6
-                      class="uppercase text-blueGray-400 mb-1 text-xs font-semibold"
+                      class="uppercase text-blueGray-400 mb-1 text-xs font-semibold "
                     >
                       Prijzen
                     </h6>
@@ -82,9 +92,7 @@
                           </button>
                         </form>
                       </div>
-                      
-                        {% comment %} <button type="submit">Bevestig</button>
-                    </form> {% endcomment %}
+
                     </h2>
                   </div>
                 </div>
@@ -129,336 +137,8 @@
       </div>
     </div>
   </div>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-    charset="utf-8"
-  ></script>
-  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-  <script type="text/javascript">
-    /* Make dynamic date appear */
-    (function () {
-      if (document.getElementById("get-current-year")) {
-        document.getElementById("get-current-year").innerHTML =
-          new Date().getFullYear();
-      }
-    })();
-    /* Sidebar - Side navigation menu on mobile/responsive mode */
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("bg-white");
-      document.getElementById(collapseID).classList.toggle("m-2");
-      document.getElementById(collapseID).classList.toggle("py-3");
-      document.getElementById(collapseID).classList.toggle("px-6");
-    }
-    /* Function for dropdowns */
-    function openDropdown(event, dropdownID) {
-      let element = event.target;
-      while (element.nodeName !== "A") {
-        element = element.parentNode;
-      }
-      Popper.createPopper(element, document.getElementById(dropdownID), {
-        placement: "bottom-start"
-      });
-      document.getElementById(dropdownID).classList.toggle("hidden");
-      document.getElementById(dropdownID).classList.toggle("block");
-    }
+<script type="module" src="{% static 'js/main2.js' %}" ></script>
 
-    (function () {
-      /* Chart initialisations */
-      /* Line Chart */
-      var config = {
-        type: "line",
-        data: {
-          labels: [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July"
-          ],
-          datasets: [
-            {
-              label: new Date().getFullYear(),
-              backgroundColor: "#4c51bf",
-              borderColor: "#4c51bf",
-              data: [65, 78, 66, 44, 56, 67, 75],
-              fill: false
-            },
-            {
-              label: new Date().getFullYear() - 1,
-              fill: false,
-              backgroundColor: "#fff",
-              borderColor: "#fff",
-              data: [40, 68, 86, 74, 56, 60, 87]
-            }
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          responsive: true,
-          title: {
-            display: false,
-            text: "Sales Charts",
-            fontColor: "white"
-          },
-          legend: {
-            labels: {
-              fontColor: "white"
-            },
-            align: "end",
-            position: "bottom"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          scales: {
-            xAxes: [
-              {
-                ticks: {
-                  fontColor: "rgba(255,255,255,.7)"
-                },
-                display: true,
-                scaleLabel: {
-                  display: false,
-                  labelString: "Month",
-                  fontColor: "white"
-                },
-                gridLines: {
-                  display: false,
-                  borderDash: [2],
-                  borderDashOffset: [2],
-                  color: "rgba(33, 37, 41, 0.3)",
-                  zeroLineColor: "rgba(0, 0, 0, 0)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ],
-            yAxes: [
-              {
-                ticks: {
-                  fontColor: "rgba(255,255,255,.7)"
-                },
-                display: true,
-                scaleLabel: {
-                  display: false,
-                  labelString: "Value",
-                  fontColor: "white"
-                },
-                gridLines: {
-                  borderDash: [3],
-                  borderDashOffset: [3],
-                  drawBorder: false,
-                  color: "rgba(255, 255, 255, 0.15)",
-                  zeroLineColor: "rgba(33, 37, 41, 0)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ]
-          }
-        }
-      };
-      var ctx = document.getElementById("line-chart").getContext("2d");
-      window.myLine = new Chart(ctx, config);
-
-      /* Bar Chart */
-      config = {
-        type: "bar",
-        data: {
-          labels: [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July"
-          ],
-          datasets: [
-            {
-              label: new Date().getFullYear(),
-              backgroundColor: "#ed64a6",
-              borderColor: "#ed64a6",
-              data: [30, 78, 56, 34, 100, 45, 13],
-              fill: false,
-              barThickness: 8
-            },
-            {
-              label: new Date().getFullYear() - 1,
-              fill: false,
-              backgroundColor: "#4c51bf",
-              borderColor: "#4c51bf",
-              data: [27, 68, 86, 74, 10, 4, 87],
-              barThickness: 8
-            }
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          responsive: true,
-          title: {
-            display: false,
-            text: "Orders Chart"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          legend: {
-            labels: {
-              fontColor: "rgba(0,0,0,.4)"
-            },
-            align: "end",
-            position: "bottom"
-          },
-          scales: {
-            xAxes: [
-              {
-                display: false,
-                scaleLabel: {
-                  display: true,
-                  labelString: "Month"
-                },
-                gridLines: {
-                  borderDash: [2],
-                  borderDashOffset: [2],
-                  color: "rgba(33, 37, 41, 0.3)",
-                  zeroLineColor: "rgba(33, 37, 41, 0.3)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ],
-            yAxes: [
-              {
-                display: true,
-                scaleLabel: {
-                  display: false,
-                  labelString: "Value"
-                },
-                gridLines: {
-                  borderDash: [2],
-                  drawBorder: false,
-                  borderDashOffset: [2],
-                  color: "rgba(33, 37, 41, 0.2)",
-                  zeroLineColor: "rgba(33, 37, 41, 0.15)",
-                  zeroLineBorderDash: [2],
-                  zeroLineBorderDashOffset: [2]
-                }
-              }
-            ]
-          }
-        }
-      };
-      ctx = document.getElementById("bar-chart").getContext("2d");
-      window.myBar = new Chart(ctx, config);
-    })();
-  </script>
-  <script>
-    function adjustCanvasContainerHeight() {
-      var canvasContainer = document.getElementById('canvas-container');
-      var screenWidth = window.innerWidth;
-      // Adjust the height of the canvas container based on the screen width
-      if (screenWidth < 600) {
-        canvasContainer.style.height = '200px';
-      } else if (screenWidth < 1024) {
-        canvasContainer.style.height = '300px';
-      } else {
-        canvasContainer.style.height = '400px';
-      }
-    }
-  
-    // Call the function initially to set the initial height
-    adjustCanvasContainerHeight();
-  
-    // Call the function whenever the window is resized
-    window.addEventListener('resize', adjustCanvasContainerHeight);
-  </script>
-
-  {% comment %} <script type="module">
-    import * as THREE from 'https://cdn.skypack.dev/three@0.132.2/build/three.module.js';
-    
-    // Create a Three.js scene
-    const scene = new THREE.Scene();
-     scene.background = new THREE.Color(0xffffff);
-  
-    const grid = new THREE.GridHelper(30, 30);
-    scene.add(grid);
-    // Create a new box geometry
-    const bgGeometry = new THREE.BoxGeometry(20000, 20000, 20000);
-  
-    // Create a new white material for the box
-    const bgMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
-  
-    // Create a new mesh using the geometry and material
-    const bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
-  
-    // Set the position of the box so that it's behind the camera
-    bgMesh.position.set(0, 0, -10000);
-  
-    // Add the box to the scene
-    scene.add(bgMesh);
-  
-    // Create a camera and position it
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
-  
-    // Create a cube and add it to the scene
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-  
-    // Get the canvas element and use it as the renderer's output
-    const canvas = document.getElementById('my-canvas');
-    const renderer = new THREE.WebGLRenderer({ canvas });
-  
-    // Set the renderer's size
-    renderer.setSize(window.innerWidth/3, window.innerHeight*4/11);
-  
-    // Render the scene
-    function animate() {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-    animate();
-  </script> 
-  {% endcomment %}
-  <script type="module" src="{% static 'js/main.js' %}" ></script>
-  {% comment %} <script>
-    function adjustCanvasContainerHeight() {
-      var canvasContainer = document.getElementById('canvas-container');
-      var screenWidth = window.innerWidth;
-      // Adjust the height of the canvas container based on the screen width
-      if (screenWidth < 600) {
-        canvasContainer.style.height = 4='400px';
-      } else if (screenWidth < 1024) {
-        canvasContainer.style.height = '600px';
-      } else {
-        canvasContainer.style.height = '800px';
-      }
-    }
-  
-    // Call the function initially to set the initial height
-    adjustCanvasContainerHeight();
-  
-    // Call the function whenever the window is resized
-    window.addEventListener('resize', adjustCanvasContainerHeight);
-  </script> {% endcomment %}
 </body>
 
 

@@ -7,7 +7,86 @@
 <body class="text-blueGray-700 antialiased">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root">
-    <div id="canvas-container"></div>
+    
+    <div class="relative md:ml-64 bg-blueGray-50">
+   
+      <!-- Header -->
+      <div class="relative bg-mechanicalblue md:pt-32 pb-32 pt-12">
+        <div class="px-4 md:px-10 mx-auto w-full">
+          <div>
+          
+            
+          </div>
+        </div>
+      </div>
+      <!-- 3d part-->
+      <div class="px-4 md:px-10 mx-auto w-full -m-24">
+        <div class="flex flex-wrap">
+          <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+            <div
+              class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700"
+            >
+              <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
+                <div class="flex flex-wrap items-center">
+                  <div class="relative w-full max-w-full flex-grow flex-1">
+                    <h6
+                      class="uppercase text-blueGray-100 mb-1 text-xs font-semibold"
+                    >
+                    Jouw onderdeel
+                    </h6>
+                    <h2 class="text-white text-xl font-semibold">
+                      <div class="online_3d_viewer"
+
+                        model="{% static 'models/3dhubs2.IGS' %}"
+                        >
+                      </div>
+                      
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 flex-auto">
+                <!-- Chart -->
+                <div class="relative h-350-px">
+                  <canvas id="my-canvas"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full xl:w-4/12 px-4">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+            >
+              <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
+                <div class="flex flex-wrap items-center">
+                  <div class="relative w-full max-w-full flex-grow flex-1">
+                    <h6
+                      class="uppercase text-blueGray-400 mb-1 text-xs font-semibold"
+                    >
+                      Prijzen
+                    </h6>
+                    <h2 class="text-blueGray-700 text-xl font-semibold">
+                      
+                      <div
+                        class="block max-w-sm rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                        <div id="model-container"></div>
+
+                      </div>
+                      
+                        {% comment %} <button type="submit">Bevestig</button>
+                    </form> {% endcomment %}
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end specs-->
+
+        <!-- new quote-->
+        <div id="canvas-container"></div>
+        {% comment %} <div id="root"></div> {% endcomment %}
         
       </div>
     </div>
@@ -24,7 +103,7 @@
   
 
   
-  <script type="module" src="{% static 'js/main.js' %}" ></script>
+  <script type="module" src="{% static 'js/main2.js' %}" ></script>
 {% comment %}   
 
   <script type="module">

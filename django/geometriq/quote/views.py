@@ -12,24 +12,37 @@ def quote(request):
     return render(request, template,{})
 
 def upload_model(request):
-    if request.method == 'POST':
-        form = ThreeDModelForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            print(request.POST.get('model_file'))
-            return redirect('model_list')
+            
+    if request.method == 'POST' and request.FILES:
+         for file_key, uploaded_file in request.FILES.items():
+
+                    
+            model = ThreeDModel.objects.create(
+                name = uploaded_file,
+                model_file = request.FILES['file']
+            )
+            model.save()
+            id= model.UniqueId
+            print(id)
+
+         return redirect('model_list', id =model.UniqueId)
+
+
+            
     else:
-        form = ThreeDModelForm()
-    return render(request, 'quote.html', {'form': form})
+
+        return render(request, 'quote.html')
 
 
-def model_list(request):
-    models = ThreeDModel.objects.all()
-    threeDModel = ThreeDModel()
+def model_list(request, id ):
+
+    # models = ThreeDModel.objects.get(model_file=model)
+    threeDModel = ThreeDModel.objects.get(UniqueId=id )
     specificationForm = ThreeDModelSpecificationForm(request.POST)
     priceForm = PriceForm(request.POST)
     # quoteForm = QuoteForm(request.POST)
     field_name = 'fast'
+
     ThreeDModel.fast = 10
     ThreeDModel.normal = 8 
     ThreeDModel.economy = 5 
@@ -37,13 +50,14 @@ def model_list(request):
     # ThreeDModel.save()
     print('save')
 
-    obj = ThreeDModel.objects.first()
+    # obj = ThreeDModel.objects.get(pk=1)
     # print(obj)
     # my_object = Quote.objects.get(id=1)  # Assuming you want to retrieve an object with ID 1
     # value = obj.fast(value)  
+    models= 3
     
     context={}
-    context['models'] = models
+    context['model'] = threeDModel
     context['form'] = specificationForm
     context['price'] = priceForm
 

@@ -9,10 +9,17 @@
         <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
           <div class="text-center px-3 lg:px-0">
             <h2 class="text-black">Upload hier je model</h2>
-            <form method="post" enctype="multipart/form-data">
-              {% csrf_token %} {{ form.as_p }}
-              <button 
-              type="submit">Upload</button>
+            <form method="post" enctype="multipart/form-data" class="py-10">
+              {% csrf_token %} 
+              <input type="file" name="file">
+              <br>
+              <button
+              class="text-white bg-mechanicalblue active:bg-indigo-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+              type="submit"
+              href="{% url 'quote' %}"
+            >
+              <i class="fas fa-arrow-alt-circle-down "></i> upload model
+            </button>
             </form>
           </div>
           </div>

@@ -31,10 +31,17 @@
                 class="w-full text-L px-3 h-12 my-2 outline-none rounded-md border focus:shadow-sm"><br>
             
             <input type="hidden" nam value="Verzenden"
-              class="gradient2 px-8 py-4 rounded-md text-gray-800 text-l  font-extrabold  cursor-pointer hover:shadow-md"> -->
-              <button type="submit" 
+              class="gradient2 px-8 py-4 rounded-md text-gray-800 text-l  font-extrabold  cursor-pointer hover:shadow-md">
+              <button
+          class="text-white bg-mechanicalblue active:bg-indigo-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+          type="submit"
+          href="{% url 'quote' %}"
+        >
+          <i class=""></i> verzenden
+        </button>
+              {% comment %} <button type="submit" 
               class="gradient2 px-8 py-4 rounded-md text-gray-800 text-l  font-extrabold  cursor-pointer hover:shadow-md"
-              >Verzenden</button>
+              >Verzenden</button> {% endcomment %}
           </form>
       </div>
 

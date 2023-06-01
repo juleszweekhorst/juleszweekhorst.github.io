@@ -11,8 +11,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('landing.urls')),
     path('quote/', include('quote.urls')),
-    path('tail', TemplateView.as_view(template_name="base.html")),     # new
+    path('tail/', TemplateView.as_view(template_name="base.html")),     # new
 
     
-]
+] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
