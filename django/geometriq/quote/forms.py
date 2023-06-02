@@ -14,19 +14,19 @@ class ThreeDModelSpecificationForm(forms.ModelForm):
     class Meta:
         model = ThreeDModel
         fields = ['material', 'tolerance', 'notes', 'custom']
-        # widgets = {
-        #     'notes': TextInput(attrs={
-        #         'class': "form-control",
-        #         'style': 'max-width: 300px;',
-        #         'placeholder': 'notes'
-        #         }),
-        #     'custom': TextInput(attrs={
-        #         'class': "form-control",
-        #         'style': 'max-width: 300px;',
-        #         'placeholder': 'custom'
-        #         }),
+        widgets = {
+            'notes': TextInput(attrs={
+                'class': "form-control",
+                'style': 'max-width: 300px;',
+                'placeholder': 'notes'
+                }),
+            'custom': TextInput(attrs={
+                'class': "form-control",
+                'style': 'max-width: 300px;',
+                'placeholder': 'custom'
+                }),
             
-        # }
+        }
 
     def __init__(self, *args, **kwargs):
         super(ThreeDModelSpecificationForm, self).__init__(*args, **kwargs)

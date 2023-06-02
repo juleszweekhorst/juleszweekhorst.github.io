@@ -9,8 +9,10 @@
     <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" />
     <link      rel="apple-touch-icon"
       sizes="76x76"      href="{% static 'assets/img/apple-icon.png' %}"    />
-    <link rel="stylesheet" href="{% static 'assets/styles/tailwind.css' %}" /> 
-    {% comment %} https://cdn.skypack.dev/three@0.132.2/build/three.module.js {% endcomment %}
+    <title>Geometriq</title>
+    {% comment %} <meta http-equiv="X-UA-Compatible" content="ie=edge"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="{% static 'assets/styles/tailwind.css' %}" /> {% endcomment %}
+
     <script type="importmap">
       {
           "imports": {
@@ -19,17 +21,15 @@
               "OrbitControl":  "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/controls/OrbitControls.js"
           }
       }
-  </script>
-    
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    {%tailwind_css%}
 
-    
-    <title>Geometriq</title>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {% comment %} <script src="{% static 'js/scene.js' %}"></script> {% endcomment %}
-  </head>
-  <body class="text-blueGray-700 antialiased">
+    </head>
+
+
+    <body class="text-blueGray-700 antialiased">
     
     {% include 'navbar.html' %}
     
@@ -41,5 +41,6 @@
   
   <script type="text/javascript" src="{% static 'o3dv/o3dv.min.js' %}"></script>
   <script  src="{% static 'o3dv/libs/loaders/occt-import-js-worker.js' %}"></script>
+  
 
 </html>

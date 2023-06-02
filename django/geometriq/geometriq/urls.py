@@ -12,6 +12,7 @@ urlpatterns = [
     path('', include('landing.urls')),
     path('quote/', include('quote.urls')),
     path('tail/', TemplateView.as_view(template_name="base.html")),     # new
+    path("__reload__/", include("django_browser_reload.urls")),
 
     
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

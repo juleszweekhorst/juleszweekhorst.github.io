@@ -1342,10 +1342,19 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(167 243 208 / var(--tw-bg-opacity));
 }
+.bg-emerald-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+}v
 
 .bg-emerald-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+
+.bg-mechanicalblue {
+  --tw-bg-opacity: 1;
+  background-color: rgba(99, 151, 159, var(--tw-bg-opacity));
 }
 
 .bg-gray-50 {

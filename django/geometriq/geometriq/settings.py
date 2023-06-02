@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     
     'tailwind',
     'landing',
+    'django_browser_reload',
     
     'theme',
     'quote.apps.QuoteConfig',
@@ -48,6 +49,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
 
 MIDDLEWARE = [
+    
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -55,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 

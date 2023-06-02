@@ -13,18 +13,23 @@ module.exports = {
 
         /*  Templates within theme app (<tailwind_app_name>/templates), e.g. base.html. */
         '../templates/**/*.html',
+        '../templates/*.html',
 
         /*
          * Main templates directory of the project (BASE_DIR/templates).
          * Adjust the following line to match your project structure.
          */
         '../../templates/**/*.html',
+        '../../templates/*.html',
 
         /*
          * Templates in other django apps (BASE_DIR/<any_app_name>/templates).
          * Adjust the following line to match your project structure.
          */
         '../../**/templates/**/*.html',
+        '../../**/templates/*.html',
+        '../static_src/node_modules/flowbite/**/*.js',
+        'static_src/node_modules/flowbite/**/*.js',
 
         /**
          * JS: If you use Tailwind CSS in JavaScript, uncomment the following lines and make sure
@@ -54,5 +59,6 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/line-clamp'),
         require('@tailwindcss/aspect-ratio'),
+        require('flowbite/plugin'),
     ],
 }
